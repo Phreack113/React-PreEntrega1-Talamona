@@ -16,12 +16,21 @@
 
 .navBar ul li {
     list-style: none;
-    color: white;
 }
 
 .navBar ul li:hover{
     font-weight: 500;
     cursor: pointer;
+}
+
+.navBar ul li a, .logo a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.navBar ul li .active{
+    font-weight: 700;
 }
 
 .navBar .logo {

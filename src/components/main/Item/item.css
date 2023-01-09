@@ -1,0 +1,34 @@
+.prdCard{
+    display: flex;
+    flex-direction: column;
+    /* background-color: grey; */
+    align-items: center;
+    min-width: 200px;
+    padding: 5px;
+    border: 2px solid white;
+    text-decoration: none;
+}
+
+.prdCard:hover{
+    border: 2px solid black;
+}
+
+.prdCard .prdImg{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.prdCard .prdImg img{
+    height: 100%;
+}
+
+.prdCard .prdName{
+    font-weight: 700;
+    color: black;
+}
+
+.prdCard .prdPrice{
+    color: black;
+}

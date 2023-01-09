@@ -1,0 +1,32 @@
+.itemDetailCard{
+    display: flex;
+    padding: 30px;
+}
+
+.itemDetailCard .itemImg{
+    width: 300px;
+    height: 300px;
+}
+
+.itemName{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.qtyButtons{
+    display: flex;
+    padding-top: 10px;
+}
+
+.qtyButtons .but{
+    width: 40px;
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.qtyButtons .butQty{
+    padding: 10px;
+}

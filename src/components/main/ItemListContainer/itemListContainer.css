@@ -1,0 +1,13 @@
+.itemListCotainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+.title{
+    font-size: 30px;
+    font-weight: 900;
+    padding-left: 10px;
+}
