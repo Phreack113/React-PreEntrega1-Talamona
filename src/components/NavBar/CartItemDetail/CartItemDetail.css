@@ -1,0 +1,41 @@
+.cartCard{
+    display: flex;
+    margin: 10px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.cartBottomCart{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.prdName{
+    font-weight: 900;
+}
+.un{
+    font-size: 10px;
+}
+
+.cartCard .total{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.cartRightCard p{
+    text-align: right;
+}
+
+.cartCard .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 50px;
+    width: 100px;
+}
+
+.cartCard img{
+    height: 100%;
+}

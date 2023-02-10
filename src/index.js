@@ -4,6 +4,7 @@ import './index.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/main/ItemListContainer/itemListContainer'
 import ItemDetail from './components/main/ItemDetail/ItemDetail';
+import CustomProvider from './components/Context/CustomProvider';
 import { BrowserRouter } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
@@ -11,23 +12,25 @@ import { Route } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-      <Route
-          path='/'
-          element={<ItemListContainer greeting={'Productos'}/>}
-        />
+    <CustomProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
         <Route
-          path='/categoria/:idCategory'
-          element={<ItemListContainer greeting={'Productos'}/>}
-        />
-        <Route 
-          path='/producto/:idPrd'
-          element={<ItemDetail />}
-        />
-      </Routes>
-    </BrowserRouter>
+            path='/'
+            element={<ItemListContainer greeting={'Productos'}/>}
+            />
+          <Route
+            path='/categoria/:idCategory'
+            element={<ItemListContainer greeting={'Productos'}/>}
+            />
+          <Route 
+            path='/producto/:idPrd'
+            element={<ItemDetail />}
+            />
+        </Routes>
+      </BrowserRouter>
+    </CustomProvider>
   </>
 );
 

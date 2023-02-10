@@ -30,3 +30,22 @@
 .qtyButtons .butQty{
     padding: 10px;
 }
+
+.itemPrice{
+    font-weight: 400;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+/* .css-78trlr-MuiButtonBase-root-MuiIconButton-root{
+    z-index: 0 !important;
+}  */
+
+.qtyButtons{
+    position: absolute;
+    z-index: 0 !important;
+}
+
+.itemImg img{
+    max-height: 200px;
+}

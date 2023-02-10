@@ -1,0 +1,32 @@
+.modalBack{
+    position: fixed;
+    top:0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal{
+    background-color: white;
+    width: 500px;
+    max-height: 90vh;
+    /* height: 90vh; */
+    border-radius: 10px;
+}
+
+.modal h2{
+    padding: 10px;
+    border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.buttonsContainer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding: 10px;
+}

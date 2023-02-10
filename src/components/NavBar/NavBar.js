@@ -1,8 +1,12 @@
 import './NavBar.css';
 import CartWidget from '../NavBar/CartWidget/CartWidget';
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { contexto } from '../../components/Context/CustomProvider';
+
 
 function NavBar() {
+  const { tatalQty } = useContext(contexto);
   return (
     <nav className="navBar">
         <h2 className="logo"><a href='/'>La Previa</a></h2>
@@ -12,7 +16,7 @@ function NavBar() {
             <li><NavLink to="/categoria/promociones">Promociones</NavLink></li>
             <li><NavLink to="/contacto">Contacto</NavLink></li>
             <li>
-              <CartWidget />
+              <CartWidget qty={tatalQty}/>
             </li>
         </ul>
     </nav>
