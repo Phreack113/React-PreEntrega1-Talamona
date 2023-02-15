@@ -1,8 +1,11 @@
 import Item from "../Item/item";
-import { prds } from '../../../data'
+// import { prds } from '../../../data'
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import './itemListContainer.css'
+
+import { productsCollection } from '../../../firebaseConfig';
+import { getDocs , query , where } from "firebase/firestore"
 
 function ItemListContainer({ greeting }) {
   
@@ -14,19 +17,34 @@ function ItemListContainer({ greeting }) {
   
   useEffect(() => {
     const getPrds = () => {
-      return new Promise((resolve, reject) => {
-          setTimeout(() => {
-             resolve(prds); 
-          }, 500);
-        });
+      let filtro 
+
+      if(idCategory){
+       filtro = query(productsCollection,where("category","==",idCategory))
+      } else {
+        filtro = productsCollection
+      }
+
+      const pedidoPorCategoria = getDocs(filtro)
+
+      pedidoPorCategoria
+          .then((resultado) => {
+              const productos = resultado.docs.map((doc) => {
+                  return { id : doc.id , ...doc.data() }
+              })
+              setItems(productos)
+          })
+          .catch((error) => {
+              console.log(error)
+          })
     }
     
     getPrds()
-    .then( productos => {
-      const filterPrds = productos.filter( prd => prd.category === idCategory);
-      setItems(idCategory ? filterPrds : productos);
-    })
-    .catch( err => console.log(err));
+    // .then( productos => {
+    //   const filterPrds = productos.filter( prd => prd.category === idCategory);
+    //   setItems(idCategory ? filterPrds : productos);
+    // })
+    // .catch( err => console.log(err));
   }, [idCategory]);
 
   

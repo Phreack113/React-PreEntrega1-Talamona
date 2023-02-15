@@ -15,6 +15,7 @@ const CarritoProvider = ({ children }) => {
 
     const mas = () => {
         const newQty = qty + 1;
+        console.log(newQty)
         setQty(newQty)
         changePrd(prd, newQty)
     }

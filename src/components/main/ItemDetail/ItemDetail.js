@@ -1,7 +1,7 @@
 import './ItemDetail.css'
 import { useParams } from 'react-router-dom';
 import { useContext, useEffect} from 'react';
-import { prds } from '../../../data';
+// import { prds } from '../../../data';
 
 import { contexto } from '../../Context/CustomProvider';
 
@@ -11,6 +11,8 @@ import IconButton from '@mui/material/IconButton';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
 
+import { getDoc, doc } from "firebase/firestore"
+import { productsCollection } from '../../../firebaseConfig';
 
 function ItemDetail() {
     const { prd, setPrd, mas, menos, isInCart, qty } = useContext(contexto);
@@ -20,19 +22,20 @@ function ItemDetail() {
 
     useEffect(() => {
         const getPrds = () => {
-          return new Promise((resolve, reject) => {
-              setTimeout(() => {
-                 resolve(prds); 
-              }, 500);
-            });
-        }
+            const referenciaDoc = doc(productsCollection,idPrd)
+            const pedido = getDoc(referenciaDoc)
+
+            pedido
+                .then((resultado) => {
+                    const producto = {...resultado.data(), id: idPrd}
+                    setPrd(producto)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        };
         
         getPrds()
-        .then( productos => {
-            const item = productos.find( prd => prd.id === parseInt(idPrd));
-            setPrd(item)
-        })
-        .catch( err => console.log(err));
       }, [idPrd, setPrd]);
     
     return (

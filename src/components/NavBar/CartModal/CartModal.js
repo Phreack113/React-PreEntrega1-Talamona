@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 
 function CartModal() {
     
-    const { setViewModal, cleanCart } = useContext(contexto);
+    const { setViewModal, cleanCart, totalAmount } = useContext(contexto);
       
     const closeCart = () => {
         setViewModal(false);
@@ -20,6 +20,9 @@ function CartModal() {
             <h2>Carrito de compras</h2>
             <CartItemContainer />
             <div className='buttonsContainer'>
+                <div className='totalAmount'>
+                 <p>Total a pagar $ {totalAmount}</p>
+                </div>
                 <Button variant="text" onClick={closeCart}>Cerrar</Button>
                 <Button variant="text" onClick={cleanCart}>Descartar</Button>
                 <Button variant="contained" onClick={closeCart}>Pagar</Button>
