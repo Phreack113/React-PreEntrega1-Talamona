@@ -18,7 +18,6 @@ La Previa es un e-commerce diseñado para la venta de bebidas y juegos de mesa.
 
 > Puedes visitar el proyecto terminado desde el siguiente link
 
-```
 [acá](https://phreack113.github.io/React-Talamona/)
 
 ![vista previa](https://res.cloudinary.com/dayuqc7ze/image/upload/v1676500096/laPrevia/pag_hd5hmn.png)
