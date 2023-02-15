@@ -7,7 +7,7 @@ function Item ({prd}){
         <>
             {prd.map( prd => {
                 return (
-                    <Link to={`/producto/${prd.id}`} className="prdCard" key={prd.id}>
+                    <Link to={`/React-Talamona/producto/${prd.id}`} className="prdCard" key={prd.id}>
                         <div className="prdImg">
                             <img src={prd.img} alt='foto producto'/>
                         </div>

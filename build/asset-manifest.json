@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.8083712f.css",
-    "main.js": "/static/js/main.4805f46c.js",
-    "index.html": "/index.html",
-    "main.8083712f.css.map": "/static/css/main.8083712f.css.map",
-    "main.4805f46c.js.map": "/static/js/main.4805f46c.js.map"
+    "main.css": "/React-Talamona/static/css/main.8083712f.css",
+    "main.js": "/React-Talamona/static/js/main.228e8fd7.js",
+    "index.html": "/React-Talamona/index.html",
+    "main.8083712f.css.map": "/React-Talamona/static/css/main.8083712f.css.map",
+    "main.228e8fd7.js.map": "/React-Talamona/static/js/main.228e8fd7.js.map"
   },
   "entrypoints": [
     "static/css/main.8083712f.css",
-    "static/js/main.4805f46c.js"
+    "static/js/main.228e8fd7.js"
   ]
 }

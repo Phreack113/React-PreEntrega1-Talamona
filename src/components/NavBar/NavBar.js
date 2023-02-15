@@ -9,12 +9,12 @@ function NavBar() {
   const { tatalQty } = useContext(contexto);
   return (
     <nav className="navBar">
-        <h2 className="logo"><a href='/'>La Previa</a></h2>
+        <h2 className="logo"><NavLink to="/React-Talamona/">La Previa</NavLink></h2>
         <ul>
-            <li><NavLink to="/categoria/bebidas">Bebidas</NavLink></li>
-            <li><NavLink to="/categoria/juegos">Juegos</NavLink></li>
-            <li><NavLink to="/categoria/promociones">Promociones</NavLink></li>
-            <li><NavLink to="/contacto">Contacto</NavLink></li>
+            <li><NavLink to="/React-Talamona/categoria/bebidas">Bebidas</NavLink></li>
+            <li><NavLink to="/React-Talamona/categoria/juegos">Juegos</NavLink></li>
+            <li><NavLink to="/React-Talamona/categoria/promociones">Promociones</NavLink></li>
+            <li><p className='contacto'>Contacto</p></li>
             <li>
               <CartWidget qty={tatalQty}/>
             </li>

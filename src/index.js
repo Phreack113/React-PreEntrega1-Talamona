@@ -17,15 +17,15 @@ root.render(
         <NavBar />
         <Routes>
         <Route
-            path='/'
+            path='/React-Talamona/'
             element={<ItemListContainer greeting={'Productos'}/>}
             />
           <Route
-            path='/categoria/:idCategory'
+            path='/React-Talamona/categoria/:idCategory'
             element={<ItemListContainer greeting={'Productos'}/>}
             />
           <Route 
-            path='/producto/:idPrd'
+            path='/React-Talamona/producto/:idPrd'
             element={<ItemDetail />}
             />
         </Routes>
